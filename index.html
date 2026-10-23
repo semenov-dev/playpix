@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="PlayPix — создаём игры, в которые хочется играть.">
+  <title>PlayPix — Game Studio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #0b1020;
+      color: #f7f8ff;
+      font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: auto; padding: 0 24px; }
+    header {
+      border-bottom: 1px solid #ffffff18;
+      background: #0b1020e8;
+    }
+    nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .logo { font-size: 27px; font-weight: 900; letter-spacing: -1px; }
+    .logo span { color: #8b7bff; }
+    .nav-links { display: flex; gap: 25px; font-size: 14px; color: #aeb5cd; }
+    .nav-links a:hover { color: white; }
+    .hero {
+      text-align: center;
+      padding: 125px 0 115px;
+      background: radial-gradient(ellipse at top, #34265a80, transparent 65%);
+    }
+    .tag {
+      display: inline-block;
+      color: #c0b6ff;
+      border: 1px solid #7869bd70;
+      background: #55449b28;
+      padding: 9px 18px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-size: clamp(46px, 8vw, 92px);
+      letter-spacing: -4px;
+      line-height: 1.05;
+      margin: 28px 0;
+    }
+    h1 span { color: #9b8cff; }
+    .subtitle {
+      color: #aeb5cd;
+      font-size: 19px;
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto 38px;
+    }
+    .button {
+      display: inline-block;
+      background: #8b7bff;
+      color: #fff;
+      padding: 16px 30px;
+      border-radius: 12px;
+      font-weight: 750;
+      transition: 0.2s;
+    }
+    .button:hover { background: #a397ff; transform: translateY(-2px); }
+    section { padding: 80px 0; }
+    h2 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -1px; }
+    .muted { color: #aeb5cd; line-height: 1.7; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+    .card {
+      border: 1px solid #ffffff18;
+      background: #151b2f;
+      border-radius: 20px;
+      padding: 30px;
+      transition: 0.2s;
+    }
+    .card:hover {
+      border-color: #8b7bff80;
+      transform: translateY(-4px);
+    }
+    .card .symbol { font-size: 35px; }
+    .card h3 { margin: 20px 0 8px; }
+    .about {
+      background: #11172a;
+      border-top: 1px solid #ffffff12;
+      border-bottom: 1px solid #ffffff12;
+    }
+    footer {
+      padding: 35px 0;
+      color: #8390aa;
+      font-size: 14px;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    @media (max-width: 700px) {
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 85px 0; }
+      h1 { letter-spacing: -2px; }
+      .nav-links { gap: 12px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a class="logo" href="#">PLAY<span>PIX.</span></a>
+        <div class="nav-links">
+          <a href="#games">Наши игры</a>
+          <a href="#about">О нас</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="container">
+        <div class="tag">INDEPENDENT GAME STUDIO</div>
+        <h1>We make<br><span>games.</span></h1>
+        <p class="subtitle">
+          PlayPix — независимая игровая студия.
+          Создаём увлекательные игры для миллионов игроков
+          на разных платформах.
+        </p>
+        <a href="#games" class="button">Узнать больше ↓</a>
+      </div>
+    </div>
+
+    <section id="games">
+      <div class="container">
+        <h2>Что мы создаём</h2>
+        <p class="muted">
+          Экспериментируем с жанрами, механиками и игровыми мирами.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <div class="symbol">🎮</div>
+            <h3>PC Games</h3>
+            <p class="muted">
+              Игры для компьютеров с увлекательным геймплеем.
+            </p>
+          </div>
+          <div class="card">
+            <div class="symbol">📱</div>
+            <h3>Mobile Games</h3>
+            <p class="muted">
+              Игры, созданные для мобильных устройств.
+            </p>
+          </div>
+          <div class="card">
+            <div class="symbol">🌐</div>
+            <h3>Web Games</h3>
+            <p class="muted">
+              Доступные браузерные игры без установки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>Small team. Big ideas.</h2>
+        <p class="muted" style="max-width:650px">
+          Мы любим видеоигры и превращаем интересные идеи
+          в интерактивные миры. Разрабатываем собственные
+          проекты и постоянно ищем новые способы удивить игроков.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 PlayPix. All rights reserved.</span>
+      <span>Independent Game Studio</span>
+    </div>
+  </footer>
+
+</body>
+</html>
